@@ -223,6 +223,7 @@
     <Compile Include="Class\ArticleInfor.cs" />
     <Compile Include="Class\article_bussiness.cs" />
     <Compile Include="Class\Common.cs" />
+    <Compile Include="Class\RegiterClass.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

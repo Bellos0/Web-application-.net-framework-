@@ -92,7 +92,7 @@ namespace asp.net_webapp.Class
             return dt;
         }
 
-        public void excuteSQL(string query, SqlParameter[] parameters = null)
+        public int excuteSQL(string query, SqlParameter[] parameters = null)
         {
             using(SqlConnection connection = new SqlConnection(strCon))
             {
@@ -103,7 +103,15 @@ namespace asp.net_webapp.Class
                     {
                         cmd.Parameters.AddRange(parameters);
                     }
-                    cmd.ExecuteNonQuery();
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        return 1; // thanh cong
+                    }
+                    else
+                    {
+                        return 0; // that bai
+                    }
+                    //cmd.ExecuteNonQuery();
                     
                 }
             }

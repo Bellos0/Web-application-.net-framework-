@@ -1,4 +1,5 @@
-﻿using System;
+﻿using asp.net_webapp.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,25 @@ namespace asp.net_webapp
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnReg_Click(object sender, EventArgs e)
+        {
+            string messSuccess = "Register successfully!";
+            string messFail = "Register fail! Please try again.";
+            string username = txtUserName.Text.Trim();
+            string password = txtPass.Text.Trim();
+            string email = txtMail.Text.Trim();
+            string phone = txtPhone.Text.Trim();
+            RegiterClass service = new RegiterClass();
+            if (service.RegiterProccess(username,password,email,phone))
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", $"alert('{messSuccess}')", true);
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", $"alert('{messFail}')", true);
+            }
         }
     }
 }

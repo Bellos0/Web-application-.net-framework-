@@ -93,12 +93,14 @@
                         &nbsp
                     </td>
                     <td class="auto-style3">
-                        <asp:Button ID="btNow" runat="server"  Text="Now" OnClick="btToday_Click" OnClientClick="return confirm('are you sure pick the date?');" />
+                        <%--<asp:Button ID="btNow" runat="server"   Text="Now" OnClick="btToday_Click" OnClientClick="return confirm('are you sure pick the date?');" />
                         &nbsp 
-                        <asp:Literal ID="ltrSelectDate" runat="server" Text="Format date: dd-MM-yyyy"></asp:Literal>
+                        Format date: dd-MM-yyyy"--%>
                     </td>
                     <td class="auto-style4">
-                        &nbsp;</td>
+                        &nbsp;
+
+                    </td>
                 </tr>
             </table>
 

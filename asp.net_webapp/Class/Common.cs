@@ -48,29 +48,29 @@ namespace asp.net_webapp.Class
             return dt;
         }
 
-        public DataTable GetTable(string query, SqlParameter parameters =null)
-        {
-            DataTable dt = new DataTable();
-            using (SqlConnection connection = new SqlConnection(strCon))
-            {
+        //public DataTable GetTable(string query, SqlParameter parameters =null)
+        //{
+        //    DataTable dt = new DataTable();
+        //    using (SqlConnection connection = new SqlConnection(strCon))
+        //    {
               
-                using (SqlCommand cmd = new SqlCommand(query,connection ))
-                {
-                    // thuc te parameter la @taikhoan, da duoc khai bao o ben nguoidungbussiness
-                    // sang ben nay chi can add them no vao de getable hieu duoc @taikhoan la gi.
-                    if (parameters != null)
-                    {
-                        cmd.Parameters.Add(parameters);
-                    }
-                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                        da.Fill(dt);
+        //        using (SqlCommand cmd = new SqlCommand(query,connection ))
+        //        {
+        //            // thuc te parameter la @taikhoan, da duoc khai bao o ben nguoidungbussiness
+        //            // sang ben nay chi can add them no vao de getable hieu duoc @taikhoan la gi.
+        //            if (parameters != null)
+        //            {
+        //                cmd.Parameters.Add(parameters);
+        //            }
+        //            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+        //                da.Fill(dt);
 
-                }
-            }
-            return dt;
-        }
+        //        }
+        //    }
+        //    return dt;
+        //}
 
-        public DataTable GetTable_addrange(string query, SqlParameter[] parameters = null)
+        public DataTable GetTable(string query, SqlParameter[] parameters = null)
         {
             DataTable dt = new DataTable();
             using (SqlConnection connection = new SqlConnection(strCon))
@@ -80,6 +80,7 @@ namespace asp.net_webapp.Class
                 {
                     // thuc te parameter la @taikhoan, da duoc khai bao o ben nguoidungbussiness
                     // sang ben nay chi can add them no vao de getable hieu duoc @taikhoan la gi.
+                    // vi khai bao paramaters la dang array [] nen su dung addrange
                     if (parameters != null)
                     {
                         cmd.Parameters.AddRange(parameters);

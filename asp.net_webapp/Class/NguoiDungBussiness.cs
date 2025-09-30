@@ -33,7 +33,7 @@ namespace asp.net_webapp
 
 
             Common common = new Common();
-            return common.GetTable_addrange(strSQL, parm);
+            return common.GetTable(strSQL, parm);
         }
     }
 }

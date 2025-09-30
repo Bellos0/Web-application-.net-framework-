@@ -64,7 +64,7 @@
         <div>
             <asp:Button ID="btnReg" runat="server" Text="Regiter User" OnClick="btnReg_Click" />
             &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-            <asp:Button ID="btnTerminal" runat="server" Text="Terminal" />
+            <asp:Button ID="btnTerminal" runat="server" Text="Terminal" OnClientClick="return confirm('Are you terminated operation?')" OnClick="btnTerminal_Click" />
         </div>
     </form>
 </body>

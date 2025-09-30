@@ -57,15 +57,7 @@ namespace asp.net_webapp.Class
                 return true; // thanh cong
             }
 
-            //do
-            //{
-            //    id = rnd.Next(0, 100000);
-            //     dtcheckID = common.GetTable(strCheckID);
-            //} while (dtcheckID.Rows.Count < 0 );
-            //if (common.excuteSQL(strquery, parameters) == 1)
-            //{
-            //    return true; // thanh cong
-            //}
+            
             else
             {
                 

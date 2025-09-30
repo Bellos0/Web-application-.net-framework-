@@ -18,7 +18,7 @@ namespace asp.net_webapp
         protected void btnReg_Click(object sender, EventArgs e)
         {
             string messSuccess = "Register successfully!";
-            string messFail = "Register fail! Please try again.";
+            string messFail = "Register fail! Username maybe exist or something else. Please try again.";
             string username = txtUserName.Text.Trim();
             string password = txtPass.Text.Trim();
             string email = txtMail.Text.Trim();
@@ -32,6 +32,11 @@ namespace asp.net_webapp
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", $"alert('{messFail}')", true);
             }
+        }
+
+        protected void btnTerminal_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/DangNhap.aspx");
         }
     }
 }

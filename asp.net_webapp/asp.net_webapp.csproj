@@ -188,6 +188,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="ShowArticleDB.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ucTimKiem.ascx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -224,6 +225,7 @@
     <Compile Include="Class\article_bussiness.cs" />
     <Compile Include="Class\Common.cs" />
     <Compile Include="Class\RegiterClass.cs" />
+    <Compile Include="Class\ShowArticleDB.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -277,6 +279,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowArticleDB.aspx.cs">
+      <DependentUpon>ShowArticleDB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowArticleDB.aspx.designer.cs">
+      <DependentUpon>ShowArticleDB.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

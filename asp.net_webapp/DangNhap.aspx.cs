@@ -46,7 +46,7 @@ namespace asp.net_webapp
 
                     //ben doi la cach thu hai de luu thong tin dang nhap vao session
                     //Session["tendangnhap"] = dtUser.Rows[0]["tendangnhap"].ToString();
-                    Response.Redirect("~/articleList.aspx");
+                    Response.Redirect("~/ShowArticleDB.aspx");
                 }
                 else
                 {

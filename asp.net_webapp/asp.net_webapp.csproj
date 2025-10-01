@@ -125,6 +125,8 @@
     <Content Include="Detail.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="images\del.png" />
+    <Content Include="images\edit.png" />
     <Content Include="images\img1.png" />
     <Content Include="images\img2.png" />
     <Content Include="images\img3.png" />
@@ -318,6 +320,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="DLL\" />
     <Folder Include="imagesSQL\" />
   </ItemGroup>
   <ItemGroup>
@@ -330,6 +333,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

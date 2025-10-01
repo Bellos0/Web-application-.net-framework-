@@ -24,10 +24,12 @@ namespace asp.net_webapp
             DataTable dt = service.loadArticleSQL();
             dtlArticleSQL.DataSource = dt;
             dtlArticleSQL.DataBind();
+            
         }
 
         protected void dtlArticleSQL_ItemDataBound(object sender, DataListItemEventArgs e)
         {
+        
 
         }
     }

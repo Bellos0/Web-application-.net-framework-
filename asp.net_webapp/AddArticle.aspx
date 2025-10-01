@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddArticle.aspx.cs" Inherits="asp.net_webapp.AddArticle" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddArticle.aspx.cs" Inherits="asp.net_webapp.AddArticle"  %>
+
 
 <!DOCTYPE html>
 

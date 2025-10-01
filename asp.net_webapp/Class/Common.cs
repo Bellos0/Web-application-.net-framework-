@@ -48,27 +48,7 @@ namespace asp.net_webapp.Class
             return dt;
         }
 
-        //public DataTable GetTable(string query, SqlParameter parameters =null)
-        //{
-        //    DataTable dt = new DataTable();
-        //    using (SqlConnection connection = new SqlConnection(strCon))
-        //    {
-              
-        //        using (SqlCommand cmd = new SqlCommand(query,connection ))
-        //        {
-        //            // thuc te parameter la @taikhoan, da duoc khai bao o ben nguoidungbussiness
-        //            // sang ben nay chi can add them no vao de getable hieu duoc @taikhoan la gi.
-        //            if (parameters != null)
-        //            {
-        //                cmd.Parameters.Add(parameters);
-        //            }
-        //            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-        //                da.Fill(dt);
-
-        //        }
-        //    }
-        //    return dt;
-        //}
+        
 
         public DataTable GetTable(string query, SqlParameter[] parameters = null)
         {
@@ -112,7 +92,6 @@ namespace asp.net_webapp.Class
                     {
                         return 0; // that bai
                     }
-                    //cmd.ExecuteNonQuery();
                     
                 }
             }

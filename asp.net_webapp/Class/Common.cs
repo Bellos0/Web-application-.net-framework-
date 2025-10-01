@@ -48,7 +48,22 @@ namespace asp.net_webapp.Class
             return dt;
         }
 
-        
+        public SqlDataReader readData_SQLreader(string query, SqlParameter[] parameters = null)
+        {
+            SqlDataReader reader;
+            SqlConnection connection = new SqlConnection(strCon);
+            using (SqlCommand cmd = new SqlCommand(query, connection))
+            {
+                connection.Open();
+                if (parameters != null)
+                {
+                    cmd.Parameters.AddRange(parameters);
+                }
+                reader = cmd.ExecuteReader();
+            }
+            return reader;
+        }
+
 
         public DataTable GetTable(string query, SqlParameter[] parameters = null)
         {

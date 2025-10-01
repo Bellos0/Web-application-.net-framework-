@@ -123,6 +123,7 @@
     <Content Include="DangNhap.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Detail.aspx" />
+    <Content Include="DetailShowArticleDB.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="images\del.png" />
@@ -226,6 +227,7 @@
     <Compile Include="Class\ArticleInfor.cs" />
     <Compile Include="Class\article_bussiness.cs" />
     <Compile Include="Class\Common.cs" />
+    <Compile Include="Class\DetailShowArticleStoredSQL.cs" />
     <Compile Include="Class\RegiterClass.cs" />
     <Compile Include="Class\ShowArticleDB.cs" />
     <Compile Include="Contact.aspx.cs">
@@ -255,6 +257,13 @@
     </Compile>
     <Compile Include="Detail.aspx.designer.cs">
       <DependentUpon>Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailShowArticleDB.aspx.cs">
+      <DependentUpon>DetailShowArticleDB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailShowArticleDB.aspx.designer.cs">
+      <DependentUpon>DetailShowArticleDB.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

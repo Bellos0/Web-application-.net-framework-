@@ -29,8 +29,7 @@ namespace asp.net_webapp
 
         protected void dtlArticleSQL_ItemDataBound(object sender, DataListItemEventArgs e)
         {
-        
-
+            
         }
     }
 }

@@ -5,23 +5,23 @@
         <h1>Show article stores at database</h1>
     </div>
     <div>
-        <asp:DataList ID="dtlArticleSQL" runat="server" Width="608px" OnItemDataBound="dtlArticleSQL_ItemDataBound">
+        <asp:DataList ID="dtlArticleSQL" runat="server" Width="608px" OnItemDataBound="dtlArticleSQL_ItemDataBound" OnItemCommand="dtlArticleSQL_ItemCommand">
             <HeaderTemplate>
                 <table></table>
             </HeaderTemplate>
             <ItemTemplate>
                 <tr>
                     <td>
-                        <asp:Image ID="img" ImageUrl='<%# Eval("images") %>' runat="server" ImageAlign="Left" Height="200px" Width="200px" />
+                        <asp:Image ID="img" ImageUrl='<%# Eval("images") %>' runat="server" ImageAlign="Left" Height="100px" Width="100px" />
                     </td>
                     <td>
                         <asp:HyperLink ID="hplTitle" runat="server"
-                            NavigateUrl='<%# "~/DetailShowArticleDB.aspx?artID"+ Eval("artID") %>' Text='<%# Bind("title") %>' Font-Bold="True" BorderColor="White" ForeColor="#0000CC" Font-Size="Large">Title Article</asp:HyperLink>
+                            NavigateUrl='<%# "~/DetailShowArticleDB.aspx?artID="+ Eval("artID") %>' Text='<%# Eval("title") %>' Font-Bold="True" BorderColor="White" ForeColor="#0000CC" Font-Size="Large">Title Article</asp:HyperLink>
                         <br />
                         <asp:Literal ID="ltrSdes" runat="server" Text='<%#Bind("description") %>'>literal short description</asp:Literal>
                     </td>
                     <td>
-                        <asp:ImageButton ID="imbtEdit" runat="server" Height="30px" Width="30px" ImageUrl="~/images/edit.png" />
+                        <asp:ImageButton ID="imbtEdit" runat="server" Height="30px"  Width="30px" ImageUrl="~/images/edit.png"  CommandName="EditArticle" CommandArgument='<%# Eval("artID") %>' />
                         &nbsp;&nbsp;
                         <asp:ImageButton ID="imbtDel" runat="server" Height="30px" Width="30px" OnClientClick="return confirm('Are yu sure to delete?')" ImageUrl="~/images/del.png" />
                     </td>

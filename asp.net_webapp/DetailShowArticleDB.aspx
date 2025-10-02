@@ -15,7 +15,7 @@
             <asp:Label ID="lbCategory" runat="server" Text="Label">category</asp:Label>
         </div>
         <div>
-            <asp:Image ID="imgArticle" runat="server" />
+            <asp:Image ID="imgArticle" runat="server" Height="200px" Width="200px" />
         </div>
         <div>
             <asp:TextBox ID="txtDes" runat="server"></asp:TextBox>

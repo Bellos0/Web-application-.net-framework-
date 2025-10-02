@@ -15,9 +15,14 @@ namespace asp.net_webapp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadArticleSQL();
+            
+            if (!IsPostBack)
+            {
+                LoadArticleSQL();
+            }
         }
 
+       
         public void LoadArticleSQL()
         {
             asp.net_webapp.Class.ShowArticleDB service = new asp.net_webapp.Class.ShowArticleDB();
@@ -30,6 +35,15 @@ namespace asp.net_webapp
         protected void dtlArticleSQL_ItemDataBound(object sender, DataListItemEventArgs e)
         {
             
+        }
+
+        protected void dtlArticleSQL_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName == "EditArticle")
+            {
+                string artID = e.CommandArgument.ToString();
+                Response.Redirect($"EditArticle.aspx?artID={artID}");
+            }
         }
     }
 }
